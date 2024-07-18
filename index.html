@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sitio Web Institucional</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link href="./Styles.css" rel="stylesheet" />
+    <style>
+      /* Custom CSS for transitions and animations */
+      .fade-enter-active,
+      .fade-leave-active {
+        transition: opacity 0.5s ease;
+      }
+      .fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+        opacity: 0;
+      }
+
+      /* Ensure images fit within the container */
+      .line-col {
+        height: 450px;
+        width: 5px;
+        background-color: red;
+      }
+      .line-col:nth-child(even) {
+        background-color: #002060;
+      }
+      .line-col:nth-child(odd) {
+        background-color: #79c043;
+      }
+      .line-row {
+        width: 100%;
+        height: 5px;
+        background-color: #79c043;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-blue-500 p-2">
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="text-white  font-bold w-32 text-sm">Seguriad de la Información</div>
+        <div class="block lg:hidden">
+          <button id="nav-toggle" class="text-white focus:outline-none">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex space-x-4">
+          <a
+            href="#"
+            data-section="section1"
+            class="nav-link text-white hover:bg-blue-700 p-2 rounded"
+            >Portada</a
+          >
+          <a
+            href="#"
+            data-section="section2"
+            class="nav-link text-white hover:bg-blue-700 p-2 rounded"
+            >Legislación Informática</a
+          >
+          <a
+            href="#"
+            data-section="section3"
+            class="nav-link text-white hover:bg-blue-700 p-2 rounded"
+            >Leyes Nacionales e Internacionales</a
+          >
+          <a
+            href="#"
+            data-section="section4"
+            class="nav-link text-white hover:bg-blue-700 p-2 rounded"
+            >Trámite de Registro de Obras</a
+          >
+          <a
+            href="#"
+            data-section="section5"
+            class="nav-link text-white hover:bg-blue-700 p-2 rounded"
+            >Ética Informática</a
+          >
+          <a
+            href="#"
+            data-section="section6"
+            class="nav-link text-white hover:bg-blue-700 p-2 rounded"
+            >Delitos Informáticos</a
+          >
+          <a
+            href="#"
+            data-section="section7"
+            class="nav-link text-white hover:bg-blue-700 p-2 rounded"
+            >Conclusiones y Referencias</a
+          >
+        </div>
+      </div>
+      <div id="nav-menu" class="lg:hidden hidden">
+        <a
+          href="#"
+          data-section="section1"
+          class="block text-white bg-blue-600 p-2"
+          >Portada</a
+        >
+        <a
+          href="#"
+          data-section="section2"
+          class="block text-white bg-blue-600 p-2"
+          >Legislación Informática</a
+        >
+        <a
+          href="#"
+          data-section="section3"
+          class="block text-white bg-blue-600 p-2"
+          >Leyes Nacionales e Internacionales</a
+        >
+        <a
+          href="#"
+          data-section="section4"
+          class="block text-white bg-blue-600 p-2"
+          >Trámite de Registro de Obras</a
+        >
+        <a
+          href="#"
+          data-section="section5"
+          class="block text-white bg-blue-600 p-2"
+          >Ética Informática</a
+        >
+        <a
+          href="#"
+          data-section="section6"
+          class="block text-white bg-blue-600 p-2"
+          >Delitos Informáticos</a
+        >
+        <a
+          href="#"
+          data-section="section7"
+          class="block text-white bg-blue-600 p-2"
+          >Conclusiones y Referencias</a
+        >
+      </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="container mx-auto p-4">
+      <div id="section1" class="section fade-enter-active">
+        <h1 class="text-4xl font-bold mb-4">Portada Institucional</h1>
+        <div class="relative h-screen w-full p-2.5">
+          <div class="w-full h-full">
+            <div class="flex items-center gap-2.5 h-36">
+              <img class="w-52" src="./Images/LogoUPT.png" alt="Logo UPT" />
+              <div class="w-full flex flex-col items-center">
+                <h1 class="text-center text-lg w-full">
+                  UNIVERSIDAD POLITÉCNICA DE TECÁMAC.
+                </h1>
+                <div class="line-row"></div>
+              </div>
+            </div>
+            <div class="absolute w-full pt-36 top-0 left-0 h-full flex">
+              <div class="h-full w-52">
+                <div class="w-52 h-[570px] flex justify-around">
+                  <div class="line-col"></div>
+                  <div class="line-col"></div>
+                  <div class="line-col"></div>
+                </div>
+                <img class="w-52" src="./Images/UPTIS.png" alt="UPTIS" />
+              </div>
+              <div
+                class="h-full w-full text-center flex flex-col justify-around items-center pb-52"
+              >
+                <p>INGENERÍA EN SOFTWARE</p>
+                <p>Seguridad de la Infomación</p>
+                <p>NÉSTOR APOLO LÓPEZ GONZÁLEZ</p>
+                <div>
+                  <p>RODRIGUEZ DÍAZ RODRIGO</p>
+                  <p>MARTINEZ JIMENEZ RODRIGO</p>
+                </div>
+                <div>
+                  <p>1321124164</p>
+                  <p>1321124075</p>
+                </div>
+                <p>4924IS</p>
+                <p><b>Seguriad de la Información</b></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="section2" class="section hidden fade-enter-active">
+        <h1 class="text-4xl font-bold mb-4">Legislación Informática</h1>
+        <h2 class="text-3xl font-bold mt-4 mb-2">
+          1.1 Conceptos de derechos de autor, privacidad y protección de datos
+        </h2>
+        <p class="text-lg mb-4">
+          Los derechos de autor son un conjunto de normas y principios que
+          regulan los derechos morales y patrimoniales que la ley concede a los
+          autores por el hecho de crear una obra literaria, artística, musical,
+          científica o didáctica, esté publicada o inédita.
+        </p>
+        <p class="text-lg mb-4">
+          La privacidad y protección de datos personales se refiere a la gestión
+          adecuada de los datos personales de los individuos, garantizando que
+          estos no sean utilizados de manera indebida.
+        </p>
+        <img
+          src="./Images/privacidad.jpg"
+          alt="Protección de datos"
+          class="w-full mb-4 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105"
+        />
+      </div>
+      <div id="section3" class="section hidden fade-enter-active">
+        <h1 class="text-4xl font-bold mb-4">
+          Leyes Nacionales e Internacionales
+        </h1>
+        <h2 class="text-3xl font-bold mt-4 mb-2">
+          1.2 Leyes nacionales e internacionales aplicables a los derechos de
+          autor, privacidad y protección de datos
+        </h2>
+        <p class="text-lg mb-4">
+          Existen diversas leyes tanto a nivel nacional como internacional que
+          regulan los derechos de autor y la protección de datos. Entre las más
+          relevantes se encuentran:
+        </p>
+        <ul class="list-disc ml-8 mb-4">
+          <li>La Ley Federal del Derecho de Autor en México.</li>
+          <li>
+            El Reglamento General de Protección de Datos (GDPR) en Europa.
+          </li>
+          <li>La Digital Millennium Copyright Act (DMCA) en Estados Unidos.</li>
+        </ul>
+        <img
+          src="./Images/proteccionData.jpg"
+          alt="Leyes internacionales"
+          class="w-full mb-4 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105"
+        />
+        <h2 class="text-3xl font-bold mt-4 mb-2">
+          1.3 Trámites y requisitos de registro de obras ante la institución de
+          derechos de autor
+        </h2>
+        <p class="text-lg mb-4">
+          Para registrar una obra ante la institución de derechos de autor, se
+          deben cumplir ciertos requisitos, tales como:
+        </p>
+        <ul class="list-disc ml-8 mb-4">
+          <li>Presentar una solicitud formal.</li>
+          <li>Proporcionar una copia de la obra.</li>
+          <li>Pagar las tarifas correspondientes.</li>
+        </ul>
+        <img
+          src="./Images/tramite.jpg"
+          alt="Registro de obras"
+          class="w-full mb-4 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105"
+        />
+      </div>
+      <div id="section4" class="section hidden fade-enter-active">
+        <h1 class="text-4xl font-bold mb-4">Trámite de Registro de Obras</h1>
+        <h2 class="text-3xl font-bold mt-4 mb-2">
+          1.4 Proceso de trámite de registro de obras ante la institución de
+          derechos de autor
+        </h2>
+        <p class="text-lg mb-4">
+          El proceso de registro de obras incluye varios pasos, entre ellos:
+        </p>
+        <ol class="list-decimal ml-8 mb-4">
+          <li>Completar el formulario de solicitud.</li>
+          <li>Presentar una copia de la obra.</li>
+          <li>Realizar el pago de las tarifas.</li>
+          <li>Esperar la revisión y aprobación por parte de la institución.</li>
+        </ol>
+        <img
+          src="./Images/firma.jpg"
+          alt="Proceso de registro"
+          class="w-full mb-4 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105"
+        />
+        <h2 class="text-3xl font-bold mt-4 mb-2">
+          1.5 Proceso de elaboración de avisos de privacidad
+        </h2>
+        <p class="text-lg mb-4">
+          Elaborar avisos de privacidad implica varios pasos clave para asegurar
+          la protección de los datos personales:
+        </p>
+        <ul class="list-disc ml-8 mb-4">
+          <li>
+            Identificar qué datos personales se recopilan y con qué propósito.
+          </li>
+          <li>Informar a los usuarios sobre cómo se utilizarán sus datos.</li>
+          <li>Garantizar que los datos se almacenarán de manera segura.</li>
+          <li>
+            Proporcionar opciones para que los usuarios puedan controlar sus
+            datos personales.
+          </li>
+        </ul>
+        <img
+          src="./Images/aviso.jpg"
+          alt="Avisos de privacidad"
+          class="w-full mb-4 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105"
+        />
+      </div>
+      <div id="section5" class="section hidden fade-enter-active">
+        <h1 class="text-4xl font-bold mb-4">Ética Informática</h1>
+        <h2 class="text-3xl font-bold mt-4 mb-2">
+          2. Ética informática y delitos informáticos
+        </h2>
+        <h3 class="text-2xl font-bold mt-4 mb-2">
+          2.1 Conceptos de ética y delitos informáticos
+        </h3>
+        <p class="text-lg mb-4">
+          La ética informática se refiere a los principios y normas que rigen el
+          comportamiento de los individuos en el uso de la tecnología. Los
+          delitos informáticos incluyen actividades ilegales como el hacking, el
+          robo de datos y el fraude en línea.
+        </p>
+        <img
+          src="./Images/delito.jpg"
+          alt="Ética informática"
+          class="w-full mb-4 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105"
+        />
+      </div>
+      <div id="section6" class="section hidden fade-enter-active">
+        <h1 class="text-4xl font-bold mb-4">Delitos Informáticos</h1>
+        <h2 class="text-3xl font-bold mt-4 mb-2">
+          2.2 Características de los delitos informáticos tipificados en México
+        </h2>
+        <p class="text-lg mb-4">
+          En México, los delitos informáticos incluyen:
+        </p>
+        <ul class="list-disc ml-8 mb-4">
+          <li>Acceso no autorizado a sistemas y datos informáticos.</li>
+          <li>Modificación o eliminación de datos sin permiso.</li>
+          <li>Uso de software malicioso (malware).</li>
+        </ul>
+        <img
+          src="./Images/mal.jpg"
+          alt="Delitos informáticos en México"
+          class="w-full mb-4 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105"
+        />
+        <h2 class="text-3xl font-bold mt-4 mb-2">
+          2.3 Aspectos legales relacionados con delitos informáticos en México
+        </h2>
+        <p class="text-lg mb-4">
+          Los aspectos legales incluyen sanciones penales y civiles para los
+          responsables de cometer delitos informáticos, así como la
+          implementación de medidas de ciberseguridad por parte de las
+          organizaciones.
+        </p>
+        <img
+          src="./Images/seguridad.jpg"
+          alt="Aspectos legales de delitos informáticos"
+          class="w-full mb-4 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105"
+        />
+        <h2 class="text-3xl font-bold mt-4 mb-2">
+          2.4 Proceso de elaboración de códigos de conducta y ética informática
+        </h2>
+        <p class="text-lg mb-4">
+          Elaborar códigos de conducta y ética informática implica:
+        </p>
+        <ol class="list-decimal ml-8 mb-4">
+          <li>Definir los valores y principios éticos de la organización.</li>
+          <li>Establecer políticas claras sobre el uso de la tecnología.</li>
+          <li>Capacitar a los empleados en prácticas éticas y seguras.</li>
+          <li>Monitorear y hacer cumplir las políticas establecidas.</li>
+        </ol>
+        <img
+          src="./Images/hacker.jpg"
+          alt="Códigos de conducta informática"
+          class="w-full mb-4 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105"
+        />
+      </div>
+      <div id="section7" class="section hidden fade-enter-active">
+        <h1 class="text-4xl font-bold mb-4">Conclusiones y Referencias</h1>
+        <p class="text-lg mb-4">
+          En conclusión, la legislación y ética informática son fundamentales
+          para proteger los derechos de autor, la privacidad y los datos
+          personales, así como para prevenir y sancionar los delitos
+          informáticos. Es crucial que las organizaciones y los individuos estén
+          informados y cumplan con las leyes y principios éticos establecidos.
+        </p>
+        <h2 class="text-3xl font-bold mt-4 mb-2">Referencias en formato APA</h2>
+        <p class="text-lg mb-4">
+          A continuación, se presentan algunas referencias en formato APA:
+        </p>
+        <ul class="list-disc ml-8 mb-4">
+          <li>
+            González, M. (2018).
+            <em>Protección de datos personales: Fundamentos y legislación</em>.
+            Editorial Jurídica.
+          </li>
+          <li>
+            Smith, J. (2020).
+            <em>Cybersecurity and Data Privacy: Principles and Practices</em>.
+            CyberTech Publishing.
+          </li>
+          <li>
+            European Union. (2016).
+            <em>General Data Protection Regulation (GDPR)</em>. Recuperado de
+            <a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+              >https://eur-lex.europa.eu/eli/reg/2016/679/oj</a
+            >
+          </li>
+          <li>
+            Instituto Nacional de Transparencia, Acceso a la Información y
+            Protección de Datos Personales (INAI). (2020).
+            <em
+              >Ley Federal de Protección de Datos Personales en Posesión de los
+              Particulares</em
+            >. Recuperado de
+            <a href="https://home.inai.org.mx">https://home.inai.org.mx</a>
+          </li>
+          <li>
+            Organization for Economic Cooperation and Development (OECD).
+            (2019).
+            <em
+              >OECD Guidelines on the Protection of Privacy and Transborder
+              Flows of Personal Data</em
+            >. Recuperado de
+            <a href="https://www.oecd.org">https://www.oecd.org</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
